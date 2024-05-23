@@ -318,7 +318,7 @@ span{
     border: 3.5px solid #b2f71c9b;
 }
 .portfolio-box:hover img {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .portfolio-box:hover .groupname h3,.groupname h6 {
     color: var(--main-color);
