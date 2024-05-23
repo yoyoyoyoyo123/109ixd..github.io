@@ -1,0 +1,48 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: tomato;
+}
+
+.us{
+    width: 30%;
+    height: 5%;
+    background-color: aquamarine;
+}
+
+.maintext{
+    width: 80%;
+    height: 15%;
+    background-color: blueviolet;
+}
+.sectext{
+    width: 80%;
+    height: 5%;
+    background-color: bisque;
+}
+.mainpic{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transform-style: preserve-3d;
+}
+.startbtn{
+    width: 30%;
+    height: 10%;
+    background-color: yellow;
+}
+.endtext{
+    width: 40%;
+    height: 5%;
+    background-color: violet;
+}

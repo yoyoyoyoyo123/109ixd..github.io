@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>心理測驗</title>
+    <link rel="stylesheet" href="question.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <div class="black" id="black"></div>
+    <div class="start" id="start">
+      <div class="guide"></div>
+      <div class="textcontainer">
+        <h3><span id="greeting" class="text"></span></h3>
+        <h3><span id="greeting2" class="text"></span></h3>
+        <h3><span id="greeting3" class="text"></span></h3>
+        <h3><span id="greeting4" class="text"></span></h3>
+      </div>
+      <div class="startbtn" id="startbtn" style="z-index: 15;">
+        <h1>(Click to Start.)</h1>
+      </div>
+    </div>
+
+    <div class="main" id="main" style="display: none">
+      <div class="head">
+        <div class="logo"><img id="logo" src="story/01_Q1.png" alt="" /></div>
+        <div class="num">
+          <img id="num" src="story/01_Process.png" alt="" />
+        </div>
+      </div>
+      <div id="q1" class="qtext">
+        <div class="qtextcontainer">
+          <h3><span id="q11" class="qqtext"></span></h3>
+          <h3><span id="q12" class="qqtext"></span></h3>
+          <h3><span id="q13" class="qqtext"></span></h3>
+        </div>
+      </div>
+      <div id="q2" class="qtext">
+        <div class="qtextcontainer">
+          <h3><span id="q21" class="qqtext"></span></h3>
+          <h3><span id="q22" class="qqtext"></span></h3>
+        </div>
+      </div>
+      <div id="q3" class="qtext">
+        <div class="qtextcontainer">
+          <h3><span id="q31" class="qqtext"></span></h3>
+          <h3><span id="q32" class="qqtext"></span></h3>
+        </div>
+      </div>
+      <div id="q4" class="qtext">
+        <div class="qtextcontainer">
+          <h3><span id="q41" class="qqtext"></span></h3>
+          <h3><span id="q42" class="qqtext"></span></h3>
+          <h3><span id="q43" class="qqtext"></span></h3>
+          <h3><span id="q44" class="qqtext"></span></h3>
+        </div>
+      </div>
+      <div class="bigQ">
+        <div class="bigQcontainer">
+          <h3><span id="mainQ1" class="mainQ"></span></h3>
+          <h3><span id="mainQ2" class="mainQ"></span></h3>
+          <h3><span id="mainQ3" class="mainQ"></span></h3>
+          <h3><span id="mainQ4" class="mainQ"></span></h3>
+        </div>
+      </div>
+      <div class="mainpic"><img src="story/1-1.jpg" alt="" /></div>
+      <div id="questions" class="questions">
+        <div
+          class="question"
+          id="question1"
+          style="display: flex; flex-direction: column"
+        >
+          <label>
+            <input
+              type="radio"
+              name="question1"
+              value="A"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question1','question2', 'A','1-1')"
+            >
+              <h1>傳教士本人</h1>
+            </div>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="question1"
+              value="B"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question1','question2', 'B','1-2')"
+            >
+              <h1>他手上的傳單</h1>
+            </div>
+          </label>
+        </div>
+        <div class="question" id="question2">
+          <label>
+            <input
+              type="radio"
+              name="question2"
+              value="A"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question2','question3', 'A','2-1')"
+            >
+              <h1>他本人的故事</h1>
+            </div>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="question2"
+              value="B"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question2','question3', 'B','2-2')"
+            >
+              <h1>這個宗教的教義</h1>
+            </div>
+          </label>
+        </div>
+        <div class="question" id="question3">
+          <label>
+            <input
+              type="radio"
+              name="question3"
+              value="A"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question3','question4', 'A','3-1')"
+            >
+              <h1>反正也沒其他事情，就跟他去吧</h1>
+            </div>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="question3"
+              value="B"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question3','question4', 'B','3-2')"
+            >
+              <h1>雖然沒其他事情，但我不想去</h1>
+            </div>
+          </label>
+        </div>
+        <div class="question" id="question4">
+          <label>
+            <input
+              type="radio"
+              name="question4"
+              value="A"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question4','result', 'A','4-1')"
+            >
+              <h1>不想跟太多陌生人見面，拒絕他吧</h1>
+            </div>
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="question4"
+              value="B"
+              style="display: none"
+            />
+            <div
+              class="chooseA"
+              onclick="selectAnswer('question4','result', 'B','4-2')"
+            >
+              <h1>晚餐聚會？一定很好玩，我要去！</h1>
+            </div>
+          </label>
+        </div>
+        <div class="nextcontainer">
+          <div
+            id="nextButton"
+            class="nextButton"
+            onclick="validateAndShowNextQuestion()"
+            style="display: none"
+          >
+            (NEXT)
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <div class="footpic"><img src="story/Bottom.png" alt="" /></div>
+      </div>
+    </div>
+    <div class="endpage" id="endpage">
+      <div class="shiny"></div>
+      <div class="guide">
+        <!-- <img src="story/Shine.png" alt=""> -->
+      </div>
+      <div class="endtextcontainer">
+        <h3><span id="endtext" class="text"></span></h3>
+      </div>
+    </div>
+    <div class="result" id="result" style="display: none">
+      <div class="resultpage">
+        <div class="resultImage">
+          <img id="resultImage" src="" alt="結果圖片" />
+          <div class="resultlink">
+            <a href="#" id="resultLink">
+              <img id="resultButton" src="result/go.png" alt="結果按鈕" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="godcontainer">
+        <div class="god"><img class="shine" src="story/Shine.png" alt="" /></div>
+      </div>
+    </div>
+    <script src="question.js"></script>
+  </body>
+</html>

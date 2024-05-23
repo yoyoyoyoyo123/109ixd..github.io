@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+:root{
+    --bg-color:#000000;
+    --second-bg-color:#000000;
+    --text-color:#ffffff;
+    --main-color:#b2f71c;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .5s;
+    font-weight: 500;
+}
+.navbar a:hover,.navbar a.active{
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.heading{
+    text-align:left;
+    font-size: 3.75rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0 2rem;
+    /* margin-bottom: 5rem; */
+    /* min-height: 50vh; */
+
+}
+
+.home-img{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    /* animation: floatImage 4s ease-in-out infinite; */
+}
+
+.groupimage{
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+    transition: .5s ease;
+}
+/* .home-img:hover img {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+.home-img .home-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.home-img:hover .home-content{
+    transform: translateY(0%);
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }    
+    100%{
+        transform: translateY(0);
+    }
+} */
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+.home span{
+    font-size: 80rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content p{
+    font-size: 1rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color:var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+/* about */
+.about{
+    padding: 0rem 9% 2rem;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    margin-bottom: 5rem;
+    min-height: 50vh;
+
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+}
+.gobtn{
+    text-align: right;
+    margin-top: 3rem;
+}
+.gobtn button{
+    background-color: #000000;
+    border: 0.2rem solid #b2f71c;
+    color: #b2f71c;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 25rem;
+}
+.gobtn button:hover{
+    cursor: pointer;
+    background-color: #b2f71c;
+    color: #000000;
+}
+.about-img img{
+    width: 35vw;
+}
+
+.about-content h2{
+    margin-bottom: 4rem;
+}
+.about-content h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+/* services */
+.advisor{
+    padding: 0rem 9% 2rem;
+    background-color: var(--second-bg-color);
+    margin-bottom: 5rem;
+    min-height: 50vh;
+}
+.advisor h2{
+    margin-bottom: 4rem;
+}
+.advisor-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.advisor-bigbox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.advisor-box{
+    width: 30%;
+    background-color: #b2f71c37; /* 您需要的背景顏色 */
+    border-radius: 20px; /* 圓角邊框 */
+    padding: 20px;
+    text-align: left;
+    margin: 10px;
+}
+.advisor-box h3{
+    font-size: 20px;
+}
+.advisor-box p{
+    font-size: 18px;
+}
+.advisor-image {
+    width: 65%; /* 圖片容器寬度 */
+    aspect-ratio: auto 1 / 1;  /* 圖片容器高度 */
+    border-radius: 50%; /* 使圖片圓形 */
+    overflow: hidden;
+    margin: 15px 30% 0px;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+.advisor-image img {
+    width: 100%;
+    height: auto;
+}
+.advisor-text{
+    width: 60%;
+    font-size: 24px;
+    text-align: left;
+}
+
+/* portfolio */
+.portfolio{
+    padding: 0rem 9% 2rem;
+    background-color: var(--second-bg-color);
+    margin-bottom: 5rem;
+    min-height: 50vh;
+
+}
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    height: 500px;
+}
+
+.portfolio-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    flex: 1;
+}
+
+.portfolio-box {
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    background-color:#ffffff23;
+    overflow: hidden;
+    position: relative;
+    transition: .5s ease;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    text-align: left;
+}
+.portfolio-box .group{
+    font-size: 3rem;
+    transition: .5s ease;
+    padding-left: 10%;
+}
+
+.portfolio-box.small {
+    width: 100%; /* Smaller boxes will take the full width of .portfolio-left */
+}
+
+.portfolio-box.large {
+    flex: 2;
+}
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.portfolio-box:hover {
+    height: 100%;
+    background-color: #b2f71c3f;
+}
+.portfolio-box:hover .group{
+    transform: scale(0);
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(0,0,0,.1),var(--main-color)); */
+    display: flex;
+   /* flex-direction: row-reverse; */
+    justify-content: center;
+    align-items:start;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 4rem;
+    transform: translateY(120%);
+    transition: .5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0%);
+}
+.portfolio-box:hover .portfolio-layer .portfolio-image{
+    transform: scale(1);
+}
+.portfolio-box:hover .portfolio-layer .portfolio-image2{
+    transform: scale(1);
+}
+.portfolio-image-container{
+    /* background-color: aqua; */
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+.portfolio-image {
+    width: 40%;
+    aspect-ratio: 1/1;
+    overflow: hidden; 
+    border-radius: 50%; 
+    margin-left: 10px;
+    border: 5px solid #b2f71c;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    min-width: 120px;
+}
+.portfolio-image2 {
+    width: 40%;
+    aspect-ratio: 1/1;
+    overflow: hidden; 
+    border-radius: 50%; 
+    margin-left: 10px;
+    border: 2px solid #b2f71c;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    /* min-width: 120px; */
+}
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.portfolio-image2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.portfolio-layer h4{
+    font-size: 3rem;
+}
+.portfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+.contact{
+    padding: 0rem 9% 2rem;
+    background-color: var(--second-bg-color);
+    margin-bottom: 5rem;
+    min-height: 50vh;
+
+}
+.contact h2{
+    margin-bottom: 4rem;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* 允許容器内的項目換行 */
+    gap: 20px;
+}
+
+.contact-box {
+    background-color: #b2f71c37; /* 您需要的背景顏色 */
+    border-radius: 20px; /* 圓角邊框 */
+    padding: 20px;
+    text-align: left;
+    width: 22%; /* 這將允許每排大約四個項目，取決於容器的寬度 */
+    margin: 10px;
+}
+
+.contact-box:hover h3, .contact-box:hover p {
+    color: var(--main-color);
+}
+.contact-box:hover .contact-image {
+    transform: scale(1.1); /* 在hover时放大图片 */
+}
+.contact-box h3{
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+.contact-box p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-image {
+    width: 65%; /* 圖片容器寬度 */
+    aspect-ratio: auto 1 / 1;  /* 圖片容器高度 */
+    border-radius: 20%; /* 使圖片圓形 */
+    overflow: hidden;
+    margin: 15px 30% 0px;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; 
+}
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+@media(max-width:1600px){
+    .home span{
+        font-size: 75rem;
+    }
+
+}
+@media(max-width:1500px){
+    .home span{
+        font-size: 70rem;
+    }
+    .contact-box {
+        width: 40%; /* 堆疊顯示 */
+    }
+}
+@media(max-width:1400px){
+    .home span{
+        font-size: 65rem;
+    }
+
+
+}
+@media(max-width:1300px){
+    .home span{
+        font-size: 60rem;
+    }
+
+}
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home span{
+        font-size: 65rem;
+    }
+    .contact-box {
+        width: 40%; /* 堆疊顯示 */
+    }
+
+}
+@media(max-width:1150px){
+    .home span{
+        font-size: 60rem;
+    }
+
+}
+@media(max-width:1100px){
+    .home span{
+        font-size: 55rem;
+    }
+
+}
+@media(max-width:1000px){
+    .home span{
+        font-size: 50rem;
+    }
+
+}
+@media (max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .home span{
+        font-size: 45rem;
+    }
+    .services{
+        padding-bottom: 2rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .portfolio-image{
+        border: 4px solid #b2f71c;
+        width: 30%;
+        min-width: 80px;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+
+}
+@media(max-width:920px){
+    .advisor-text{
+        /* width: 60%; */
+        font-size: 20px;
+        /* text-align: left; */
+    }
+    .advisor-box{
+        width: 30%;
+    }
+    .advisor-box h3{
+        font-size: 14px;
+    }
+    .advisor-box p{
+        font-size: 12px;
+    }
+}
+@media(max-width:780px){
+    .home span{
+        display: none;
+    }
+}
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2) ;
+        box-shadow: 0.5rem 1rem rgba(0,0,0,.2) ;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    /* .home{
+        flex-direction: column;
+    } */
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .groupimage{
+        width: 100vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content h3{
+        font-size: 1.6rem;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 4rem;
+    }
+    .portfolio h2{
+        margin-bottom: 4rem;
+    }
+
+    .contact-box {
+        width: 40%;
+        margin: 10px; /* 如果需要間距 */
+    }
+
+}
+@media(max-width:670px){
+    .advisor-text{
+        /* width: 60%; */
+        font-size: 16px;
+        /* text-align: left; */
+    }
+    .advisor-box{
+        width: 30%;
+    }
+    .advisor-box p{
+        font-size: 10px;
+    }
+}
+@media(max-width:617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .portfolio-box .portfolio-layer{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .portfolio-text{
+        width: 100%;
+    }
+    .portfolio-box{
+        height: 100%;
+    }
+    .portfolio-image-container{
+        justify-content: right;
+        width: 50%;
+    }
+    .portfolio-image{
+        border: 2px solid #b2f71c;
+        width: 10%;
+        /* margin-top: 20px; */
+        min-width: 50px;
+    }
+    .portfolio-image2{
+        margin-left: 0;;
+    }
+    .portfolio-layer p{
+        margin: 0%;
+    }
+    .contact-box {
+        width: 100%; /* 堆疊顯示 */
+    }
+}
+@media(max-width:590px){
+    .portfolio-text p{
+        font-size: 10px;
+    }
+    .advisor-text{
+        /* width: 60%; */
+        font-size: 14px;
+        /* text-align: left; */
+    }
+    .advisor-box{
+        width: 40%;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .advisor-text{
+        /* width: 60%; */
+        font-size: 12px;
+        /* text-align: left; */
+    }
+    .advisor-box{
+        width: 60%;
+    }
+    .advisor-box p{
+        font-size: 8px;
+    }
+}
+@media(max-width:430px){
+    .portfolio-text p{
+        font-size: 8px;
+    }
+
+}
+@media(max-width:365px){
+    .groupimage{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .advisor-text{
+        /* width: 60%; */
+        font-size: 10px;
+        /* text-align: left; */
+    }
+}

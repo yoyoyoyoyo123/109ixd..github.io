@@ -1,0 +1,126 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .bg-image {
+    background-image: url('img/landing.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+  .bg-image-1 {
+    background-image: url('img/Q1.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+  .bg-image-2 {
+    background-image: url('img/Q2.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+  .bg-image-3 {
+    background-image: url('img/Q3.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+  .bg-image-4 {
+    background-image: url('img/Q4.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+  .bg-image-5 {
+    background-image: url('img/last.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+
+  header {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    /* padding: 10px 30px; */
+  }
+
+  .logo {
+    width: 50px; /* Adjust as per your logo's size */
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 50px;
+    position: relative;
+  }
+
+  nav a:hover {
+    color: #ccc;
+  }
+
+  .centered-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .swipe-to-start {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    cursor: pointer;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }

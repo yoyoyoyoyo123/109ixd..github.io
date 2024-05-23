@@ -1,0 +1,382 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('ttc/GenYoGothic-H.ttc') format('truetype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('story/00_BK.png');
+    background-size:cover; /* 確保圖片覆蓋整個背景 */
+    background-position: center; /* 將圖片置中 */
+    background-attachment: fixed; /* 固定背景，避免滾動時圖片跟著移動 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    cursor: help;
+}
+
+:root{
+    --bg-color:#000000;
+    --second-bg-color:#000000;
+    --text-color:#ffffff;
+    --main-color:#b2f71c;
+}
+.black{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 20;
+    opacity: 0;
+}
+.fade2{
+    animation: fade2 3s ease-in-out;
+}
+@keyframes fade2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+  
+.godcontainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.god {
+    width: 650px; /* 图片的最大宽度为其父元素的100% */
+    height: auto;
+    padding-bottom: 2%;
+    /* min-width: 800px; */
+    /* background-color: black; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* background-color: aqua; */
+    /* min-width: 400px; */
+}
+.god img {
+    width: 100%; /* 图片的宽度为其父元素的100% */
+    height: auto; /* 高度自适应以保持宽高比 */
+    display: block; /* 去除默认的行内元素属性 */
+}
+.shine{
+    animation: rotateAndFade 10s linear infinite;
+}
+
+@keyframes rotateAndFade {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(180deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+
+.textcontainer{
+    position: fixed;
+    top: 14%;
+    /* background-color: rgb(255, 140, 0); */
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    z-index: 10;
+}
+.what{
+    color: var(--main-color);
+    font-size: 30px;
+}
+.bottom{
+    width: 700px;
+    height: auto;
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.start{
+    position: fixed; /* 設置絕對位置 */
+    bottom: 0;
+    right: 0;
+    transform: translate(-40%, -50%);
+    color: aqua;
+}
+.tt{
+    position: fixed;
+    top: 4%;
+    /* background-color: rgb(255, 140, 0); */
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    /* background-color: aqua; */
+    width: 500px;
+    height: auto;
+}
+.logo img{
+    width: 80%;
+    height: auto;
+    display: block; 
+}
+.year{
+    width: 150px;
+    height: auto;
+    /* background-color: brown; */
+    text-align: right;
+}
+.year img{
+    width: 80%;
+    height: auto;
+    display: block; 
+}
+.dd{
+    position: fixed;
+    bottom: 4%;
+    /* background-color: rgb(255, 140, 0); */
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.ntut{
+    /* background-color: aqua; */
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+}
+.ntut img{
+    width: 180px;
+    height: auto;
+    display: block; 
+}
+.arrow{
+    width: 300px;
+    height: 100%;
+    /* background-color: violet; */
+    display: flex;
+    justify-content: right;
+    align-items:center;
+}
+.arrow img{
+    width: 50px;
+    height: auto;
+    display: block; 
+    animation: breathe 2s ease-in-out infinite;
+}
+@keyframes breathe {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+}
+@media(max-width:2800px){
+
+}
+@media(max-width:1700px){
+
+}
+@media(max-width:1600px){
+
+}
+@media(max-width:1500px){
+
+}
+@media(max-width:1400px){
+
+}
+@media(max-width:1300px){
+
+}
+@media (max-width:1200px){
+    .god{
+        width: 600px;
+    }
+    .ntut img{
+        width: 160px;
+    }
+    .arrow img{
+        width: 45px;
+    }
+}
+@media(max-width:1150px){
+    .ntut img{
+        width: 150px;
+    }
+    .arrow img{
+        width: 40px;
+    }
+}
+@media(max-width:1100px){
+    .god{
+        width: 525px;
+    }
+    .dd{
+        bottom: 5%;
+    }
+    .ntut img{
+        width: 140px;
+    }
+    .arrow img{
+        width: 35px;
+    }
+}
+@media(max-width:1000px){
+    .god{
+        width: 550px;
+        padding-bottom: 0%;
+    }
+    .textcontainer{
+        justify-content: center;
+    }
+    .ntut img{
+        width: 130px;
+    }
+    .arrow img{
+        width: 30px;
+    }
+    .what{
+        font-size: 24px;
+    }
+}
+@media (max-width:991px){
+
+}
+@media(max-width:900px){
+    .ntut img{
+        width: 120px;
+    }
+    .arrow img{
+        width: 30px;
+    }
+}
+@media(max-width:780px){
+
+}
+@media (max-width:768px){
+    .bottom{
+        width: 680px;
+    }
+    .textcontainer{
+        top: 12%;
+    }
+}
+@media (max-width:718px){
+    .bottom{
+        width: 650px;
+    }
+    .tt{
+        top: 2%;
+    }
+}
+@media (max-width:668px){
+    .bottom{
+        width: 600px;
+    }
+}
+@media(max-width:617px){
+    .godcontainer{
+        width: 150vw;
+    }
+    .god{
+        width: 450px;
+    }
+    .bottom{
+        width: 550px;
+    }
+    .dd{
+        height:180px ;
+    }
+    .ntut img{
+        width: 100px;
+    }
+    .arrow img{
+        width: 25px;
+    }
+}
+@media (max-width:568px){
+    /* .dd{
+        bottom: 4%;
+    } */
+    .bottom{
+        width: 500px;
+    }
+    .textcontainer{
+        top: 10%;
+    }
+}
+
+@media(max-width:518px){
+    .bottom{
+        width: 450px;
+    }
+    .tt{
+        top: 0%;
+    }
+}
+@media(max-width:468px){
+    .bottom{
+        width: 400px;
+    }
+    .god{
+        width: 400px;
+    }
+}
+@media(max-width:410px){
+    .god{
+        width: 350px;
+    }
+}
+@media(max-width:418px){
+    .bottom{
+        width: 350px;
+    }
+
+}
+
+@media(max-width:365px){
+    .bottom{
+        width: 300px;
+    }
+}

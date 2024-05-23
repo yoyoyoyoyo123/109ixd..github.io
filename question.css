@@ -1,0 +1,572 @@
+@font-face {
+    font-family: 'chineseN';
+    src: url('ttc/GenYoGothic-N.ttc') format('truetype');
+}
+@font-face {
+    font-family: 'English';
+    src: url('ttf/Chinoz-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'chineseL';
+    src: url('ttc/GenYoGothic-L.ttc') format('truetype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-image: url('story/01_BK.png');
+    background-size:cover; /* 確保圖片覆蓋整個背景 */
+    background-position: center; /* 將圖片置中 */
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --bg-color:#000000;
+    --second-bg-color:#000000;
+    --text-color:#ffffff;
+    --main-color:#b2f71c;
+}
+.black{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 20;
+    opacity: 0;
+}
+.fade{
+    animation: fade 3s ease-in-out;
+}
+.fade2{
+    animation: fade2 3s ease-in-out;
+}
+@keyframes fade{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+}
+@keyframes fade2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+.start {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.guide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('story/Guide_BK.png');
+    background-size:cover; /* 確保圖片覆蓋整個背景 */
+    background-position: center; /* 將圖片置中 */
+    background-attachment: fixed; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden; */
+    z-index: 4;
+}
+.shiny{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('story/Shine.png');
+    background-size:cover; /* 確保圖片覆蓋整個背景 */
+    background-position: center; /* 將圖片置中 */
+    background-attachment: fixed; 
+    opacity: 0.1;
+}
+.guide img {
+    width: 100%; /* 图片的宽度为其父元素的100% */
+    height: auto; /* 高度自适应以保持宽高比 */
+    display: block; /* 去除默认的行内元素属性 */
+    animation: rotateAndFade 10s linear infinite;
+
+}
+.shine{
+    animation: rotateAndFade 10s linear infinite;
+}
+
+@keyframes rotateAndFade {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(180deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+/* .guide img{
+    width: 100%;
+    height: auto;
+    display: block;
+} */
+.textcontainer{
+    width: 90%;
+    height: 500px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    z-index: 10;
+}
+
+.textcontainer h3{
+    margin: 7px;
+}
+.text{
+    color: aliceblue;
+    font-family: 'chineseN', sans-serif;
+}
+.main{
+    height: 100vh;
+    width: 607.5px;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.startbtn{
+    position: fixed;
+    bottom: 15%;
+    display:block;
+    opacity: 0;
+    cursor: pointer;
+}
+.startbtn h1{
+    color: var(--main-color);
+    font-family: 'English', sans-serif;
+}
+.breathe{
+    animation: breathe 4s infinite alternate;
+}
+@keyframes breathe {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(0.95);
+    }
+  }
+
+
+.head{
+    position: relative;
+    /* background-color: rgb(255, 140, 0); */
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    /* background-color: aqua; */
+    width: 100px;
+    height: auto;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+.num{
+    width: 100px;
+    height: auto;
+    /* background-color: brown; */
+    text-align: right;
+}
+.num img{
+    width: 80%;
+    height: auto;
+    display: block; 
+}
+.qtext{
+    display: none;
+}
+.qtext,.bigQ{
+    width: 90%;
+    /* height: 100px; */
+    /* background-color: aqua; */
+}
+.mainQ{
+    font-family: 'chineseN', sans-serif;
+    font-size: 16px;
+}
+.qqtext{
+    color: aliceblue;
+    font-family: 'chineseL', sans-serif;
+    font-size: 12px;
+
+}
+.qtextcontainer{
+    position: fixed;
+    top: 13%;
+    width: 90%;
+    height:100px;
+    /* background-color: aquamarine; */
+}
+.qtextcontainer h3{
+    margin: 2px;
+    font-size: 14px;
+    /* height: 15px; */
+}
+.bigQcontainer{
+    position: fixed;
+    top: 21%;
+    width: 90%;
+    height:50px;
+    /* background-color: aquamarine; */
+}
+.bigQcontainer{
+    margin: 0%;
+    font-size:20px;
+    color: white;
+}
+
+.mainpic{
+    width: 50%;
+    aspect-ratio: 1/1;
+    /* background-color: brown; */
+}
+.mainpic img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.foot{
+    position: relative;
+    /* background-color: rgb(255, 140, 0); */
+    width: 90%;
+    height: auto;
+    /* margin-bottom: 25px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot img{
+    width: 100%;
+    height: auto;
+}
+.questions{
+    width: 90%;
+    height: 100px;
+}
+.chooseA{
+    width: 60%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.206);
+    border-radius: 5px;
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.3s ease;
+
+}
+.chooseA:hover{
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+
+}
+.chooseA.selected {
+    background-color: #b2f71c6f; /* 選中時的邊框顏色 */
+}
+.chooseA:hover h1 { 
+    color: var(--main-color);
+    font-size: 20px;
+}
+.chooseA h1{
+    font-size: 18px;
+    color: white;
+    transition: font-size 0.3s ease;
+}
+
+
+.question {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.question label{
+    display: flex;
+    justify-content: center;
+}
+
+.nextcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nextButton{
+    position: fixed;
+    /* background-color: aquamarine; */
+    font-family: 'English', sans-serif;
+    bottom: 10%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.nextButton:hover{
+    transform: scale(1.1);
+}
+
+.endpage{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+.endtextcontainer{
+    width: 90%;
+    height: 500px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.endtextcontainer h3{
+    font-size: 30px;
+    font-family: 'chineseN', sans-serif;
+}
+.result {
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(story/Guide_BK.png); */
+    overflow-y: scroll;
+    display: block;
+  }
+  
+  .resultImage {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+  }
+  
+  .resultImage img {
+    max-width: 100%;
+    transform: translateZ(0);
+  }
+  
+  .resultpage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+  }
+  
+  .resultlink {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, 0);
+  }
+  
+  #resultButton {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    z-index: 15;
+  }
+  
+  
+
+.godcontainer{
+    /* position: absolute; */
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aqua; */
+    position: fixed;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.god {
+    width: 650px; /* 图片的最大宽度为其父元素的100% */
+    height: auto;
+    padding-bottom: 2%;
+    /* min-width: 800px; */
+    /* background-color: black; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* background-color: aqua; */
+    /* min-width: 400px; */
+}
+.god img {
+    width: 100%; /* 图片的宽度为其父元素的100% */
+    height: auto; /* 高度自适应以保持宽高比 */
+    display: block; /* 去除默认的行内元素属性 */
+}
+.shine{
+    animation: rotateAndFade 10s linear infinite;
+}
+
+@keyframes rotateAndFade {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(180deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
+/* @media(max-width:1000px){
+    .text{
+        font-size: 22px;
+    }
+} */
+@media(max-width:600px){
+    .main,.resultpage{
+        width: 100%;
+    }
+    .text{
+        font-size: 18px;
+    }
+
+    .startbtn h1{
+        font-size: 28px;
+    }
+    .chooseA h1{
+        font-size: 15px;
+    }
+    .chooseA:hover h1 { 
+        font-size: 16px;
+    }
+}
+@media(max-width:520px){
+    .qtextcontainer h3{
+        height: 15px;
+    }
+    .bigQcontainer h3{
+        font-size: 16px;
+    }
+}
+@media(max-width:500px){
+    .text{
+        font-size: 16px;
+    }
+    .startbtn h1{
+        font-size: 26px;
+    }
+    .chooseA h1{
+        font-size: 13px;
+    }
+    .chooseA:hover h1 { 
+        font-size: 14px;
+    }
+}
+@media(max-width:450px){
+    .textcontainer h3{
+        margin: 3px;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .qqtext{
+        font-size: 10px;
+    }
+    .mainQ{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:400px){
+    .textcontainer h3,.qtextcontainer h3{
+        margin: 0px;
+    }
+    .text{
+        font-size: 12px;
+    }
+    .qqtext{
+        font-size: 8px;
+    }
+    .mainQ{
+        font-size: 12px;
+    }
+    .bigQcontainer{
+        top: 23%;
+    }
+    .chooseA h1{
+        font-size: 11px;
+    }
+    .chooseA:hover h1 { 
+        font-size: 12px;
+    }
+}
+@media(max-width:340px){
+    .text{
+        font-size: 10px;
+    }
+    .qqtext{
+        font-size: 8px;
+    }
+    .mainQ{
+        font-size: 10px;
+    }
+    .chooseA h1{
+        font-size: 9px;
+    }
+    .chooseA:hover h1 { 
+        font-size: 10px;
+    }
+}
